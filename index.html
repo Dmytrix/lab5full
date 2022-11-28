@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link href="css/style.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="main-page">
+        <aside>
+            <div class="logo"><img src="img-logo-1.png" class="img-logo"> dash.</div>
+            <ul class="aside-menu">
+                <li> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#5a6378"
+                        class="bi bi-file-earmark-text-fill" viewBox="0 0 16 16" style="margin-right:15px;">
+                        <path
+                            d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zM4.5 9a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1h-7zM4 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 1 0-1h4a.5.5 0 0 1 0 1h-4z" />
+                    </svg>IMO Report</li>
+                <li> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#5a6378"
+                        class="bi bi-file-earmark" viewBox="0 0 16 16" style="margin-right:15px;">
+                        <path
+                            d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z" />
+                    </svg>Conract Report</li>
+                <li> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#5a6378" class="bi bi-person"
+                        viewBox="0 0 16 16" style="margin-right:15px;">
+                        <path
+                            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                    </svg>Users</li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#5a6378" class="bi bi-window"
+                        viewBox="0 0 16 16" style="margin-right:15px;">
+                        <path
+                            d="M2.5 4a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm2-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm1 .5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z" />
+                        <path
+                            d="M2 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2zm13 2v2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1zM2 14a1 1 0 0 1-1-1V6h14v7a1 1 0 0 1-1 1H2z" />
+                    </svg><span id="CRM-but">CRM</span></li>
+                <ul id="CRM-slider">
+                    <li>Sales</li>
+                    <li>Payment</li>
+                    <li>Customers</li>
+                </ul>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#5a6378" class="bi bi-sliders"
+                        viewBox="0 0 16 16" style="margin-right:15px;">
+                        <path fill-rule="evenodd"
+                            d="M11.5 2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM9.05 3a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0V3h9.05zM4.5 7a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM2.05 8a2.5 2.5 0 0 1 4.9 0H16v1H6.95a2.5 2.5 0 0 1-4.9 0H0V8h2.05zm9.45 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm-2.45 1a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0v-1h9.05z" />
+                    </svg><span id="MDM-but">MDM</span></li>
+                <ul id="MDM-slider">
+                    <li>Apple</li>
+                    <li>Android</li>
+                    <li>Windows</li>
+                </ul>
+                <li> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#5a6378"
+                        class="bi bi-pencil-square" viewBox="0 0 16 16" style="margin-right:15px;">
+                        <path
+                            d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                        <path fill-rule="evenodd"
+                            d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                    </svg><span id="plan-builder-but">Plan Builder</span></li>
+                <ul id="plan-builder-slider">
+                    <li>Add Plan</li>
+                    <li>Remove Plan</li>
+                    <li>Change Plan</li>
+                </ul>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#5a6378"
+                        class="bi bi-gear-fill" viewBox="0 0 16 16 " style="margin-right:15px;">
+                        <path
+                            d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z" />
+                    </svg><span id="settings-but">Settings</span>
+
+                </li>
+                <ul id="settings-slider">
+                    <li>Change theme</li>
+                    <li>Language</li>
+                    <li>Learn more</li>
+                </ul>
+            </ul>
+        </aside>
+        <div class="main-content">
+            <header>
+                <div class="REPORTS">REPORTS <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                        fill="#393f4f" class="bi bi-arrow-right" viewBox="0 0 16 16" style="margin-left:10px;">
+                        <path fill-rule="evenodd"
+                            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                    </svg></div>
+                <div class="profile-header"><img src="img-profile-1.png" class="img-profile">Vincent Vega<svg
+                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#393f4f"
+                        class="bi bi-arrow-down" viewBox="0 0 16 16" style="padding-right:20px">
+                        <path fill-rule="evenodd"
+                            d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-bell"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-envelope"
+                        viewBox="0 0 16 16" style="margin-right:35px; margin-left:10px;">
+                        <path
+                            d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                    </svg>
+                </div>
+            </header>
+            <div id="main-page-content">
+                <div class="header-part-2">
+                    <input class="header-input" placeholder="Search">
+                    <div><button class="create-but">Create new value + </button></div>
+                </div>
+
+                <div class="chart-grid">
+                    <div class="charts-block">
+                        <div>
+                            <div class="num-chart">68%</div><canvas id="doughnut_1" class="chart"
+                                style="height:90px;"></canvas>
+                        </div>
+                        <div class="tasks"><span class="num">34 </span> <span style="font-size:14px">MONTH
+                                REMAINING</span>
+                            <div class="tasks-time">JOINED ON DECEMBER 2016</div>
+                        </div>
+                    </div>
+
+                    <div class="charts-block">
+                        <div>
+                            <div class="num-chart">39%</div><canvas id="doughnut_2" class="chart"
+                                style="height:90px;"></canvas>
+                        </div>
+                        <div class="tasks"><span class="num">13 </span> <span style="font-size:14px">PROJECTS
+                                COMPLETED</span>
+                            <div class="tasks-time">LAST UPDATE 24 HOURS AGO</div>
+                        </div>
+                    </div>
+
+                    <div class="charts-block">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-wallet2" viewBox="0 0 16 16">
+                                <path
+                                    d="M12.136.326A1.5 1.5 0 0 1 14 1.78V3h.5A1.5 1.5 0 0 1 16 4.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 13.5v-9a1.5 1.5 0 0 1 1.432-1.499L12.136.326zM5.562 3H13V1.78a.5.5 0 0 0-.621-.484L5.562 3zM1.5 4a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z" />
+                            </svg>
+                        </div>
+                        <div class="tasks"><span class="num">$2041</span> <span style="font-size:14px; ">TOTAL
+                                REVENUE</span>
+                            <div class="tasks-time">NEXT PAYMENT RELEASED ON 3 DAYS</div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="main-page-block2">
+                    <div class="main-chart">
+                        <div class="title-of-chart">Charmps of the month</div>
+                        <div class="title-of-chart-2">Average time of pricessing one contract</div>
+                        <div class="line-chart-block"><canvas id="myChart_3"></canvas></div>
+                        <div class="line-chart-dates"><span>Oct 14-20</span> <span>Oct 21-27</span> <span>Oct
+                                28-3</span> <span>Oct 4-10</span></div>
+                        <div class="line-chart-info"><span><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16" fill="#62baf0" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                    <circle cx="8" cy="8" r="8" />
+                                </svg> Info 1</span> <span><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16" fill="#aaf13a" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                    <circle cx="8" cy="8" r="8" />
+                                </svg> Info 2</span></div>
+                    </div>
+                    <div class="progress-bar-block">
+                        <div class="title-of-progress-bar">Month wise contract processed for 2017</div>
+                        <div class="title-of-progress-bar-2">Total contract processed</div>
+                        <div class="contract"><span>Contract#1</span><span style="color:#8e98b0;">50%</span></div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar1" role="progressbar" style="width: 50%"
+                                aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+
+                        <div class="contract"><span>Contract#2</span><span style="color:#8e98b0;">87%</span></div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar2" role="progressbar" style="width: 87%"
+                                aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+
+                        <div class="contract"><span>Contract#3</span><span style="color:#8e98b0;">32%</span></div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar3" role="progressbar" style="width: 32%"
+                                aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+
+                        <div class="contract"><span>Contract#4</span><span style="color:#8e98b0;">97%</span></div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar4" role="progressbar" style="width: 97%"
+                                aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+
+                        <div class="contract"><span>Contract#5</span><span style="color:#8e98b0;">69%</span></div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar5" role="progressbar" style="width: 69%"
+                                aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-page-block2">
+                    <div style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);">
+                        <div class="header-block2">
+                            <span>DATE</span><span>STORE</span><span>CHANNEL</span><span>MANAGER</span><span>STATUS</span>
+                        </div>
+                        <div class="users-activity-block"><span style="color:#62baf0;">20-03-2017</span>
+                            <span>Store#1</span>
+                            <span>Channel#1</span> <span>Rudi Doe</span> <span style="color:#bfcb3d"> <svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#bfcb3d"
+                                    class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                    <circle cx="8" cy="8" r="8" />
+                                </svg> Completed</span>
+                        </div>
+
+
+                        <div class="users-activity-block"><span style="color:#62baf0;">20-03-2017</span>
+                            <span>Store#2</span>
+                            <span>Channel#2</span> <span>Rian Massive</span> <span style="color:#fc9797"> <svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fc9797"
+                                    class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                    <circle cx="8" cy="8" r="8" />
+                                </svg> Rejected</span>
+                        </div>
+
+                        <div class="users-activity-block"><span style="color:#62baf0;">20-03-2017</span>
+                            <span>Store#3</span>
+                            <span>Channel#3</span> <span>Anjas Tora</span> <span style="color:#ffbb6b"> <svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffbb6b"
+                                    class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                    <circle cx="8" cy="8" r="8" />
+                                </svg> Pending</span>
+                        </div>
+
+                        <div class="users-activity-block"><span style="color:#62baf0;">20-03-2017</span>
+                            <span>Store#4</span>
+                            <span>Channel#4</span> <span>Lauren Kiev</span> <span style="color:#bfcb3d"> <svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#bfcb3d"
+                                    class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                    <circle cx="8" cy="8" r="8" />
+                                </svg> Completed</span>
+                        </div>
+
+                        <div class="users-activity-block"><span style="color:#62baf0;">20-03-2017</span>
+                            <span>Store#5</span>
+                            <span>Channel#5</span> <span>Coco Yarm</span> <span style="color:#bfcb3d"> <svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#bfcb3d"
+                                    class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                    <circle cx="8" cy="8" r="8" />
+                                </svg> Completed</span>
+                        </div>
+                    </div>
+
+                    <div class="calendar-block">
+                        <div class="container">
+                            <div class="calendar">
+                                <div class="front">
+                                    <div class="current-date">
+                                        <h1>Friday 15th</h1>
+                                        <h1>January 2016</h1>
+                                    </div>
+
+                                    <div class="current-month">
+                                        <ul class="week-days">
+                                            <li>MON</li>
+                                            <li>TUE</li>
+                                            <li>WED</li>
+                                            <li>THU</li>
+                                            <li>FRI</li>
+                                            <li>SAT</li>
+                                            <li>SUN</li>
+                                        </ul>
+
+                                        <div class="weeks">
+                                            <div class="first">
+                                                <span class="last-month">28</span>
+                                                <span class="last-month">29</span>
+                                                <span class="last-month">30</span>
+                                                <span class="last-month">31</span>
+                                                <span>01</span>
+                                                <span>02</span>
+                                                <span>03</span>
+                                            </div>
+
+                                            <div class="second">
+                                                <span>04</span>
+                                                <span>05</span>
+                                                <span class="event">06</span>
+                                                <span>07</span>
+                                                <span>08</span>
+                                                <span>09</span>
+                                                <span>10</span>
+                                            </div>
+
+                                            <div class="third">
+                                                <span>11</span>
+                                                <span>12</span>
+                                                <span>13</span>
+                                                <span>14</span>
+                                                <span class="active">15</span>
+                                                <span>16</span>
+                                                <span>17</span>
+                                            </div>
+
+                                            <div class="fourth">
+                                                <span>18</span>
+                                                <span>19</span>
+                                                <span>20</span>
+                                                <span>21</span>
+                                                <span>22</span>
+                                                <span>23</span>
+                                                <span>24</span>
+                                            </div>
+
+                                            <div class="fifth">
+                                                <span>25</span>
+                                                <span>26</span>
+                                                <span>27</span>
+                                                <span>28</span>
+                                                <span>29</span>
+                                                <span>30</span>
+                                                <span>31</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="back">
+                                    <input placeholder="What's the event?">
+                                    <div class="info">
+                                        <div class="date">
+                                            <p class="info-date">
+                                                Date: <span>Jan 15th, 2017</span>
+                                            </p>
+                                            <p class="info-time">
+                                                Time: <span>6:35 PM</span>
+                                            </p>
+                                        </div>
+                                        <div class="address">
+                                            <p>
+                                                Address: <span>129 W 81st St, New York, NY</span>
+                                            </p>
+                                        </div>
+                                        <div class="observations">
+                                            <p>
+                                                Observations: <span>Be there 15 minutes earlier</span>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="actions">
+                                        <button class="save">
+                                            Save <i class="ion-checkmark"></i>
+                                        </button>
+                                        <button class="dismiss">
+                                            Dismiss <i class="ion-android-close"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+</body>
+<script>
+    $(document).ready(function () {
+        $("#settings-but").click(function () {
+            $("#settings-slider").slideToggle();
+
+        })
+        $("#plan-builder-but").click(function () {
+            $("#plan-builder-slider").slideToggle();
+
+        })
+        $("#MDM-but").click(function () {
+            $("#MDM-slider").slideToggle();
+
+        })
+        $("#CRM-but").click(function () {
+            $("#CRM-slider").slideToggle();
+
+        })
+    })
+</script>
+
+</html>

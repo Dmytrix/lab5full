@@ -1,0 +1,36 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.2.0",
+    "canvas-gauges": "^2.1.7-linear",
+    "chart.js": "^3.9.1",
+    "gulp-cli": "^2.3.0",
+    "jquery": "^3.6.1"
+  },
+  "name": "lab_full",
+  "version": "1.0.0",
+  "description": "project",
+  "main": "index.js",
+  "devDependencies": {
+    "bootstrap-icons": "^1.9.1",
+    "browser-sync": "^2.27.10",
+    "clean": "^4.0.2",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-sass": "^5.1.0",
+    "pump": "^3.0.0",
+    "sass": "^1.54.9"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dmytro",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dmytrix/Lab.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Dmytrix/Lab/issues"
+  },
+  "homepage": "https://github.com/Dmytrix/Lab#readme"
+}

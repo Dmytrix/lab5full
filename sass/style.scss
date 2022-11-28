@@ -1,0 +1,520 @@
+body {
+    font-family: Arial;
+    margin: 0;
+
+}
+
+#main-page {
+    display: grid;
+    grid-template-columns: 300px 2fr;
+
+}
+
+aside {
+    background-color: #393f4f;
+
+}
+
+.logo {
+
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-left: 40px;
+}
+
+.img-logo {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.aside-menu {
+    color: #5a6378;
+    list-style-type: none;
+    margin-top: 35px;
+    padding-left: 0;
+}
+
+.aside-menu li {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 35px;
+}
+
+.aside-menu li:hover {
+    background-color: #2b303e;
+    color: white;
+
+}
+
+header {
+    background-color: #4e5c7e;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+.REPORTS {
+    margin-left: 30px;
+    margin-top: 32px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.img-profile {
+    height: 40px;
+    border-radius: 20px;
+    position: absolute;
+    right: 250px;
+    top: 20px
+}
+
+.profile-header {
+    align-self: center;
+    margin-bottom: 18px;
+}
+
+.bi-bell {
+    background-color: #393f4f;
+    border-radius: 50px;
+    height: 25px;
+    width: 25px;
+}
+
+.bi-envelope {
+    background-color: #393f4f;
+    height: 25px;
+    width: 25px;
+}
+
+.header-part-2 {
+    height: 70px;
+    background-color: #2b303e;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+
+}
+
+.header-input {
+    height: 35px;
+    width: 200px;
+    border-radius: 20px;
+    border: none;
+    background-color: #393f4f;
+    margin-top: 15px;
+    margin-left: 15px;
+    padding-left: 15px;
+}
+
+.create-but {
+    background-color: #62baf0;
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 15px;
+    margin-right: 15px;
+}
+
+.chart-grid {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 25px;
+    column-gap: 25px;
+}
+
+.tasks {
+    color: #5a6378;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 45px;
+    margin-right: 20px;
+    width: 200px;
+}
+
+.tasks-time {
+    color: #a3aec8;
+    font-size: 14px;
+}
+
+.charts-block {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    padding-bottom: 20px;
+}
+
+.num {
+    font-size: 40px;
+    display: block;
+}
+
+.chart {
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.main-page-content {
+    background-color: #f8f9fa;
+}
+
+.num-chart {
+    display: inline;
+    position: absolute;
+    padding-top: 72px;
+    padding-left: 65px;
+    font-size: 50px;
+    color: #5a6378;
+}
+
+.bi-wallet2 {
+    color: #ffb169;
+    height: 100px;
+    width: 120px;
+    margin-top: 45px;
+    margin-left: 60px;
+}
+
+.main-page-block2 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 25px;
+    column-gap: 25px;
+}
+
+.main-chart {
+    background-color: white;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+
+}
+
+.progress-bar-block {
+    background-color: #393f4f;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.title-of-chart {
+    text-align: center;
+    margin-top: 30px;
+    color: #5a6378;
+    font-size: 18px;
+}
+
+.title-of-chart-2 {
+    text-align: center;
+    color: #62baf0;
+    margin-top: 10px;
+}
+
+.line-chart-block {
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 35px;
+}
+
+.line-chart-dates {
+    display: flex;
+    justify-content: space-between;
+    color: #a9b3cc;
+    padding-left: 120px;
+    padding-right: 100px;
+    margin-bottom: 20px;
+}
+
+.line-chart-info {
+    margin-left: 100px;
+    color: #a3aec8;
+    padding-bottom: 40px;
+}
+
+.line-chart-info span {
+    margin-right: 20px;
+
+}
+
+.title-of-progress-bar {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    margin-top: 35px;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 23px;
+}
+
+.title-of-progress-bar-2 {
+    color: #62baf0;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.contract {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 15px;
+}
+
+.progress {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 10px;
+
+}
+
+.progress-bar1 {
+    background: #59a9c7;
+}
+
+.progress-bar2 {
+    background: #b6c647;
+}
+
+.progress-bar3 {
+    background: #fcb44c;
+}
+
+.progress-bar4 {
+    background: #f78ffe;
+}
+
+.progress-bar5 {
+    background: #f86a6a;
+}
+
+.header-block2 {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 0.5fr 1fr 0.5fr;
+    box-shadow: 5px -5px 15px rgba(0, 0, 0, 0.2);
+    color: #5a6378;
+    padding: 20px;
+    padding-left: 30px;
+    font-weight: bold;
+}
+
+.users-activity-block {
+
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 0.5fr 1fr 0.5fr;
+    color: #8c95aa;
+    padding: 20px;
+    padding-left: 30px;
+    background-color: white;
+}
+
+.calendar-block {
+
+
+    font-family: 'Roboto', sans-serif;
+    list-style: none;
+    margin: 0;
+    outline: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 600px;
+    width: 100%;
+}
+
+.calendar {
+    background: #2b4450;
+    border-radius: 4px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .3);
+    height: 550px;
+    perspective: 1000;
+    transition: .9s;
+    transform-style: preserve-3d;
+    width: 100%;
+}
+
+/* Front - Calendar */
+.front {
+    transform: rotateY(0deg);
+}
+
+.current-date {
+    border-bottom: 1px solid rgba(73, 114, 133, .6);
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 40px;
+}
+
+.current-date h1 {
+    color: #dfebed;
+    font-size: 1.4em;
+    font-weight: 300;
+}
+
+.week-days {
+    color: #dfebed;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    padding: 30px 40px;
+}
+
+.days {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.weeks {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 0 40px;
+}
+
+.weeks div {
+    display: flex;
+    font-size: 1.2em;
+    font-weight: 300;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.last-month {
+    opacity: .3;
+}
+
+.weeks span {
+    padding: 10px;
+}
+
+.weeks span.active {
+    background: #f78536;
+    border-radius: 50%;
+}
+
+.weeks span:not(.last-month):hover {
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.event {
+    position: relative;
+}
+
+.event:after {
+    content: '•';
+    color: #f78536;
+    font-size: 1.4em;
+    position: absolute;
+    right: -4px;
+    top: -4px;
+}
+
+/* Back - Event form */
+
+.back {
+    height: 100%;
+    transform: rotateY(180deg);
+}
+
+.back input {
+    background: none;
+    border: none;
+    border-bottom: 1px solid rgba(73, 114, 133, .6);
+    color: #dfebed;
+    font-size: 1.4em;
+    font-weight: 300;
+    padding: 30px 40px;
+    width: 100%;
+}
+
+.info {
+    color: #dfebed;
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    font-size: 1.2em;
+    padding: 30px 40px;
+}
+
+.info div:not(.observations) {
+    margin-bottom: 40px;
+}
+
+.info span {
+    font-weight: 300;
+}
+
+.info .date {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info .date p {
+    width: 50%;
+}
+
+.info .address p {
+    width: 100%;
+}
+
+.actions {
+    bottom: 0;
+    border-top: 1px solid rgba(73, 114, 133, .6);
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+}
+
+.actions button {
+    background: none;
+    border: 0;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin: 0;
+    padding: 30px 0;
+    text-transform: uppercase;
+    width: 50%;
+}
+
+.actions button:first-of-type {
+    border-right: 1px solid rgba(73, 114, 133, .6);
+}
+
+.actions button:hover {
+    background: #497285;
+    cursor: pointer;
+}
+
+.actions button:active {
+    background: #5889a0;
+    outline: none;
+}
+
+/* Flip animation */
+
+.flip {
+    transform: rotateY(180deg);
+}
+
+.front,
+.back {
+    backface-visibility: hidden;
+}
